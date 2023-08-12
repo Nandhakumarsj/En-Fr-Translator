@@ -14,16 +14,16 @@ class TestTranslator(unittest.TestCase):
     def test_english2french(self):
         """Tests English to French Cases"""
         print('\nTesting.. English to French Translation')
-        _test, _cases = english_to_french("Hello"), ("Bonjour", "Salute")
+        _test, _cases = english_to_french("Hello"), ("Bonjour", "Salute", "Hello")
         self.assertEqual(_test, _cases[0])
-        self.assertNotEqual(_test, _cases[1])
+        self.assertNotEqual(_test, _cases[1], _cases[2])
 
     def test_french2english(self):
         """Tests French To English Cases"""
         print('\nTesting.. French to English Translation')
-        _test, _cases = french_to_english("Bonjour"), ("Hi", "Hello")
+        _test, _cases = french_to_english("Bonjour"), ("Hi", "Hello", "Bonjour")
         self.assertEqual(_test, _cases[0])
-        self.assertNotEqual(_test, _cases[1])
+        self.assertNotEqual(_test, _cases[1], _cases[2])
 
 
 if __name__ == '__main__':
