@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Project</title>
-</head>
-<body>
-    <p>
-        The original sentence: {{original_text}}
-    </p>
-    <p>
-        The translated sentence: {{translated_text}}
-    </p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator</title>
+    <style>
+      .header {
+        border-bottom: 3px solid #3984;
+        font-size:22px;
+        color:#202034;
+        margin:10px auto 10px auto;
+      }
+      .input> label{
+        font-size:19px;
+        color: #696;
+        margin: auto 8px auto 8px;
+      }
+      .input> input {
+        padding:10px;
+        border:1px solid #2983;
+        border-radius: 22px;
+      }
+      .input-text{
+          color:#525;
+        }
+        .trans-btn{
+            padding:12px;
+            color:#3fb;
+            background-color:#82ff;
+            border: 3px solid #33faba;
+        }
+        .trans-btn:hover{
+            font-weight:550;
+            color:#82ff;
+            background-color:#33faba;
+        }
+        .trans-btn::after{
+            border: 3px solid #f333;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        Translator
+    </div>
+    <form method='post'>
+    <div class="input">
+        <label>Enter the sentence to translate: </label>
+      <input
+        class="input-text"
+        type="text"
+        name="text_input"
+        value = 'hello'
+        placeholder="Enter text here..."
+      />
+    </div>
+    <div style="text-align:center;margin:20px auto;">
+    <button type="submit" name="fr_en" value='true' class="trans-btn">
+        Translate French To English
+      </button>
+    <button type="submit" name="en_fr" value='true' class="trans-btn">
+        Translate English To French
+      </button>
+    </form>
+    </div>
+  </body>
 </html>
